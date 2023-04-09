@@ -3,6 +3,7 @@
 
 :root {
     --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(158, 60%, 25%);
     --cream: hsl(30, 38%, 92%);
     --very-dark-blue: hsl(212, 21%, 14%);
     --dark-grayish-blue: hsl(228, 12%, 48%);
@@ -99,6 +100,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor:pointer;
+}
+
+button:hover {
+    background-color: var(--very-dark-cyan);
 }
 
 .icon {
@@ -107,4 +113,47 @@ button {
     height:16px;
     background-image: url("../images/icon-cart.svg");
     margin-right:1rem;
+}
+
+
+
+@media screen and (min-width:1440px) {
+    main {
+        align-items: center;
+        padding: 0;
+        min-height: 100vh;
+    }
+    .card {
+        flex-direction: row;
+        max-width:600px;
+    }
+    .card > div {
+        flex: 1 1 300px;
+    }
+    .image {
+        align-items: stretch;
+        line-height: 0;
+    }
+    .image img {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .text {
+        padding: 2rem;
+    }
+    h3 {
+        order:-1;
+        margin-bottom:1.5rem;
+    }
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+    p {
+        margin-bottom:2rem;
+    }
+    .prices {
+        margin-bottom:2rem;
+    }
 }
